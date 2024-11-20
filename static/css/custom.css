@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .product {
+    background-color: #DEA731;
+    text-align: center; /* Center the heading */
+    padding: 20px;
+  
+  }
+  .product h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333; /* Adjust color as needed */
+  }
+
+  .product-images {
+    display: flex;
+    justify-content: space-around; /* Distribute the items evenly */
+    align-items: center; /* Align images and text in the center */
+  }
+  
+  .product-item {
+    text-align: center; /* Center-align the image and text */
+    margin: 10px;
+  }
+  
+  .product-item img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px; /* Adds space between the image and text */
+  }
+  
+
