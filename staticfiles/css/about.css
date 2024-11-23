@@ -1,0 +1,101 @@
+.hero {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    color:white;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+    
+}
+
+.content-section {
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.content-section h2 {
+    font-size: 2.5em;
+    color: #d4a02a;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 auto 30px;
+    max-width: 800px;
+    text-align: justify;  
+}
+
+.list {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.list li {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.team {
+    padding: 50px 20px;
+    background-color: #d4a02a;
+    text-align: center;
+}
+
+.team h2 {
+    color: white;
+}
+
+.team p {
+    color: white;
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.team .founders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.founder {
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.founder img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.founder h3 {
+    margin: 15px 0 5px;
+    font-size: 1.5em;
+    color: white;
+}
+
+.founder p {
+    margin: 0;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+}
+

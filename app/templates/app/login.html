@@ -1,0 +1,48 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<div 
+    class="position-fixed top-0 start-0 w-100 h-100"
+    style="z-index: -1; background-image: url('{% static "images/login.jpg" %}'); background-size: cover; background-position: center; opacity: 0.8; filter: brightness(50%);">
+</div>
+
+
+
+    <div class="row justify-content-center mt-5" style = >
+        <div class="col-md-6">
+            <h2 class="text-center mb-4 text-white">Login To Gothalo</h2>
+            <form method="post" class="custom-form bg-light p-4 border rounded shadow-sm">
+                {% csrf_token %}
+                
+                <div class="mb-3">Username
+                    <!-- Updated with placeholder -->
+                    {{ form.username|add_class:"form-control" }}
+                   
+                </div>
+                
+                <div class="mb-3">Password
+                    <!-- Updated with placeholder -->
+                    {{ form.password|add_class:"form-control" }}
+                   
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 py-2">Login</button>
+            </form>
+            <p class="text-center mt-3 text-white">
+                Don't have an account? <a href="{% url 'signup' %}" class="btn btn-outline-light btn-sm">Signup</a>
+            </p>
+        </div>
+    </div>
+</div>
+<style>
+    footer {
+      color: white !important;
+    }
+  </style>
+{% endblock %}

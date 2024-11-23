@@ -1,5 +1,41 @@
 {% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}About Us - Gothalo{% endblock %}
+
 {% block content %}
-    <h1 class="text-2xl font-bold mb-4">About Us</h1>
-    <p>This is the attendance sheet application software to faciliate for the owner and workers which are created by us and it is to facilate for all of you.</p>
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<div class="hero" style="background-image: url('{% static 'images/about.jpeg' %}');">
+    <h1>About Us</h1>
+    <p>Revolutionizing daily construction reporting from the heart of Nepal.</p>
+</div>
+<div class="content-section" id="about">
+    <h2>Welcome to Gothalo</h2>
+    <p>We are the pioneers in revolutionizing daily construction reporting, based in Kathmandu, Nepal. Our all-in-one software solution is designed to seamlessly integrate multiple aspects of construction site management, delivering unparalleled efficiency and accuracy.</p>
+</div>
+<div class="content-section" id="what-we-offer">
+    <h2>What We Offer</h2>
+    <ul class="list">
+        <li><strong>Labor Attendance & Hour Tracking:</strong> Simplify attendance management with real-time tracking and hour counting, ensuring accurate payroll and workforce accountability.</li>
+        <li><strong>Integrated Inventory Management:</strong> Keep your inventory in check with our streamlined billing system, tracking materials, equipment, and supplies effortlessly.</li>
+        <li><strong>Comprehensive Site Reporting:</strong> Document daily site activities with ease, generating detailed reports that enhance communication, transparency, and project progress monitoring.</li>
+    </ul>
+</div>
+<div class="team" id="our-story">
+    <h2>Our Story</h2>
+    <p>Gothalo is the brainchild of Ankit Subedi, a dedicated civil engineer, and Nishant Shrestha, a talented software developer. Childhood friends with a shared vision, they combined their expertise to address the unique challenges faced by construction professionals.</p>
+    <p>The name "Gothalo" comes from the Nepalese word for someone who herds cattle or manages a barn, reflecting the app's role in managing various aspects of construction site operations with care and precision.</p>
+    <div class="founders">
+        <div class="founder">
+            <img src="{% static 'images/ankit.jpeg' %}" alt="Ankit Subedi">
+            <h3>Ankit Subedi</h3>
+            <p>Civil Engineer & Co-Founder</p>
+        </div>
+        <div class="founder">
+            <img src="{% static 'images/nikson.jpg' %}" alt="Nishant Shrestha">
+            <h3>Nikson Shrestha</h3>
+            <p>Software Developer & Co-Founder</p>
+        </div>
+    </div>
+</div>
 {% endblock %}

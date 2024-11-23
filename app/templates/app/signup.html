@@ -1,0 +1,58 @@
+    {% extends 'app/base.html' %}
+    {% load crispy_forms_tags %}
+    {% load static %}
+
+    {% block title %}Signup{% endblock %}
+
+    {% block content %}
+
+    <div 
+        class="position-fixed top-0 start-0 w-100 h-100"
+        style="z-index: -1; background-image: url('{% static "images/signup.jpg" %}'); background-size: cover; background-position: center; opacity: 0.8; filter: brightness(50%);">
+    </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4 text-white">Signup To Gothalo</h2>
+                <form method="post" class="bg-light p-4 border rounded">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                        {% comment %} <div class="mb-3">Username
+                            {{ form.username }}
+                    </div>
+                    
+                    <div class="mb-3">First Name
+                        {{ form.first_name }}
+                    </div>
+
+                    <div class="mb-3">Last Name
+                        {{ form.last_name }}
+                    </div>
+
+                    <div class="mb-3">email
+                        {{ form.email }}
+                    </div>
+
+                    <div class="mb-3">Passoword
+                        {{ form.password1 }}
+                    </div>
+
+                    <div class="mb-3">Confirm Password
+                        {{ form.password2 }}
+                    </div> {% endcomment %}
+
+                    <button type="submit" class="btn btn-primary w-100" >Signup</button>
+                </form>
+                <p class="text-center mt-3 text-white">
+                    Already have an account?<a href="{% url 'login' %}" class="btn btn-outline-light btn-sm">Login</a>
+                </p>
+                </p>
+            </div>
+        </div>
+
+    <style>
+        footer {
+          color: white !important;
+        }
+      </style>
+{% endblock %}

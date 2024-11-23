@@ -1,0 +1,80 @@
+/* Set background image for the login page */
+.login-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login form styling */
+.login-form {
+    background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form headings */
+.login-form h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Styling for input fields */
+.form-control {
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.form-control:focus {
+    border-color: #0069d9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Submit button */
+.btn-primary {
+    background-color: #0069d9;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Signup link */
+a {
+    color: #0069d9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Center the login form vertically and horizontally */
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .col-md-4 {
+        width: 100%;
+    }
+}
