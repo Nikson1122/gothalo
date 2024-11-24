@@ -129,6 +129,14 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_REDIRECT_URL = '/home'
-LOGOUT_REDIRECT_URL = '/accounts/login/'
+# LOGIN_REDIRECT_URL = '/home'
+# LOGOUT_REDIRECT_URL = '/accounts/login/'
+
+# Redirect to this URL when authentication is required but user is not logged in
+LOGIN_URL = 'login'
+
+# Where to redirect users after login (optional, specific to your flow)
+LOGIN_REDIRECT_URL = 'report'  # or the page you want post-login
+LOGOUT_REDIRECT_URL = 'login'  # Where to redirect after logout
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

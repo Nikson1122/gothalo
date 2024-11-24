@@ -1,14 +1,16 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from .forms import SignUpForm
-
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 def home(request):
     return render(request, 'app/home.html')
 
 # app/views.py
+
+@login_required
 def report(request):
     return render(request, 'app/report.html')
 
@@ -48,3 +50,11 @@ def login_view(request):
     else:
         form = AuthenticationForm()
     return render(request, 'app/login.html', {'form': form})
+
+
+def logout_view(request):
+    logout(request)  # Log the user out
+    messages.success(request, "You have been logged out successfully.")  # Add a success message
+    # return render(request, 'app/logout.html')   # Redirect to the login page (or replace 'login' with any other desired URL name)
+    return redirect('login') 
+    
